@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<!-- bootstrap css -->
+  	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+  	<!-- custom styles -->
+	<link rel="stylesheet" type="text/css" href="../public/main.css">
+	<title>Todo App</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-6" id="bigTitle">
+				<img src="http://i.imgur.com/OvMZBs9.jpg">;
+			</div>
+		</div>
+	
+		<div class="row">
+	
+			<div class="col-md-6 col-md-offset-2">
+				<div id="newTask"><h3 id="addNewTask">Add a New Task</h3></div>
+			 	<div id="form">
+			 	  <form>
+					<input type= "text" class="form-control" name="task" value= "" placeholder="What Task You Have To Do?">	
+					<input type= "text" class="form-control" name="due" value= "" placeholder="Untill When You Can Do This Task?">
+					<input type= "text" class="form-control" name="assign" value= "" placeholder="Who This Task Assigned to?">
+					<input type="submit" id="submitButton" class="btn btn-default" value="Add This Task To My Todo List">	
+				  </form>
+			 	</div>				
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6" id="subtitle">
+				<h2>What you have to do...</h2>
+			</div>
+			<div class="col-md-6">
+				
+			</div>
+		</div>
+	</div>
+
+	<!-- jquery -->
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  	<!-- bootstrap js -->
+ 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<!-- custom script -->
+	<script type="text/javascript" src="../script.js"></script>
+
+</body>
+</html>

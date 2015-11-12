@@ -1,0 +1,30 @@
+body{
+	background-color: gray;
+}
+input{
+margin: 10px;
+}
+#submitButton{
+	width: 557px;
+	background-color: gray;
+}
+#newTask{
+	width: 397px;
+	height: 100px;
+	background-color: red;
+	margin-left: 104px;
+}
+#addNewTask{
+	padding:34px;
+	text-align: center;
+}
+#form{
+	display: none;
+}
+#subtitle{
+	margin-left: 338px;
+	margin-top: 40px;
+}
+#bigTitle{
+	margin-left: -93px;
+}
