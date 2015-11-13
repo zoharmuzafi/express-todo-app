@@ -7,7 +7,7 @@
   	<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
   	<!-- custom styles -->
-	<link rel="stylesheet" type="text/css" href="../public/main.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
 	<title>Todo App</title>
 </head>
 
@@ -23,8 +23,8 @@
 		<div class="row">
 	
 			<div class="col-md-6 col-md-offset-2">
-				<div id="newTask"><h3 id="addNewTask">Add a New Task</h3></div>
-			 	<div id="form">
+				<button id="newTask"><h3 id="addNewTask">Add a New Task</h3></button>
+			 	<div id="formDiv">
 			 	  <form>
 					<input type= "text" class="form-control" name="task" value= "" placeholder="What Task You Have To Do?">	
 					<input type= "text" class="form-control" name="due" value= "" placeholder="Untill When You Can Do This Task?">
@@ -38,11 +38,24 @@
 			<div class="col-md-6" id="subtitle">
 				<h2>What you have to do...</h2>
 			</div>
+		</div>
+		<div class="row">
 			<div class="col-md-6">
-				
+				<ol id="tasksList">
+					<script id= "listOfTodos" type="text/x-hendlebars-template">
+						{{#each todo}}
+						<li><strong>Task:</strong> {{title}} <strong>Due:{{dueDate}}</strong><strong>Assign To:{{assignedTo}}</strong> 
+						</li>
+						{{/each}}
+					</script>
+				</ol>
 			</div>
 		</div>
 	</div>
+
+
+	<!-- handlebars -->
+  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.3/handlebars.min.js"></script>
 
 	<!-- jquery -->
   	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -51,7 +64,9 @@
  	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 	<!-- custom script -->
-	<script type="text/javascript" src="../script.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+
+
 
 </body>
 </html>
