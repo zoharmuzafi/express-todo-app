@@ -5,7 +5,7 @@ var app = express();
 
 //require mongoose package and connect the mango db
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost/todo");
+mongoose.connect("mongodb://localhost/todo-app");
 
 //reqiure the models->todo
 var Todo = require("./models/todo");
@@ -35,7 +35,6 @@ app.get("/todos", function (req, res){
 	
 	Todo.find(function(err, todo){
 		console.log(todo);
-
 		res.json({todoList:todo});
 	});
 });
@@ -70,11 +69,14 @@ app.put("/todos/:id", function (req,res){
 
 	var TodoId = req.params.id;
 	Todo.findOne({_id: TodoId}, function(err, itemToUpdate){
-
+		
 		itemToUpdate.title = req.body.title;
 		itemToUpdate.dueDate = req.body.dueDate;
 		itemToUpdate.assignedTo = req.body.dueDate;
-		res.json(itemToUpdate);
+		itemToUpdate.save(function(err, savedItem){
+			res.json(savedItem);
+		});
+		
 	});
 });
 

@@ -5,14 +5,18 @@ input{
 margin: 10px;
 }
 #submitButton{
-	width: 557px;
-	background-color: gray;
+	width: 404px;
+	background-color: black;
+	margin-left: 101px;
+	height: 60px;
+	
 }
 #newTask{
-	width: 397px;
+	width: 401px;
 	height: 100px;
 	background-color: red;
-	margin-left: 104px;
+	margin-left: 101px;
+	margin-top: 10px;
 }
 #addNewTask{
 	padding:34px;
@@ -28,3 +32,33 @@ margin: 10px;
 #bigTitle{
 	margin-left: -93px;
 }
+.form-control{
+	width: 404px;
+	margin-left: 101px;
+}
+h3{
+	margin-top: 1px;
+}
+.smallButton{
+	background-color: gray;
+	height: 25px; 
+	width: 25px;
+	margin:5px;
+	padding: 2px;
+}
+.editForm{
+	display: none;
+	margin-left: -99px;
+}
+ol{
+	margin-left:  303px;
+	margin-top: 27px;
+}
+.update{
+	height: -18px;
+	width: 201px;
+	margin-left: 199px;
+	margin-bottom: 10px;
+
+}
+

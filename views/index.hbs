@@ -26,9 +26,9 @@
 				<button id="newTask"><h3 id="addNewTask">Add a New Task</h3></button>
 			 	<div id="formDiv">
 			 	  <form>
-					<input type= "text" class="form-control" name="task" value= "" placeholder="What Task You Have To Do?">	
-					<input type= "text" class="form-control" name="due" value= "" placeholder="Untill When You Can Do This Task?">
-					<input type= "text" class="form-control" name="assign" value= "" placeholder="Who This Task Assigned to?">
+					<input type= "text" class="form-control" name="title" value= "" placeholder="What Task You Have To Do?">	
+					<input type= "text" class="form-control" name="dueDate" value= "" placeholder="Untill When You Can Do This Task?">
+					<input type= "text" class="form-control" name="assignedTo" value= "" placeholder="Who This Task Assigned to?">
 					<input type="submit" id="submitButton" class="btn btn-default" value="Add This Task To My Todo List">	
 				  </form>
 			 	</div>				
@@ -40,18 +40,43 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<ol id="tasksList">
 					<script id= "listOfTodos" type="text/x-hendlebars-template">
-						{{#each todo}}
-						<li><strong>Task:</strong> {{title}} <strong>Due:{{dueDate}}</strong><strong>Assign To:{{assignedTo}}</strong> 
+						\{{#each todo}}
+						<li id="li\{{_id}}">
+							<button class="smallButton edit" id=\{{_id}}>
+								<span class="glyphicon glyphicon-pencil edit" aria-hidden="true"></span>
+							</button>
+							<button class="smallButton delete" data_id=\{{_id}} >
+								<span class=" delete glyphicon glyphicon-trash" aria- hidden="true"></span>
+							</button>
+							<strong>Task: </strong> \{{title}} <strong> Due: </strong>\{{dueDate}}<strong> Assign To: </strong> \{{assignedTo}}
+							<div>
+								<form class= "editForm" id="editForm\{{_id}}">
+									<input type= "text" class="form-control" name="title" value= "" placeholder="What Task You Have To Do?">
+									<input type= "text" class="form-control" name="dueDate" value= "" placeholder="Untill When You Can Do This Task?">
+									<input type= "text" class="form-control" name="assignedTo" value= "" placeholder="Who This Task Assigned to?">
+									<input type="submit" class="btn btn-default update" value="Update">
+								</form>
+							</div>
 						</li>
-						{{/each}}
+						\{{/each}}
 					</script>
 				</ol>
 			</div>
 		</div>
 	</div>
+
+
+
+
+
+
+
+
+
+
 
 
 	<!-- handlebars -->
